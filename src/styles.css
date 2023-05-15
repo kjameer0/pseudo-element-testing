@@ -1,0 +1,82 @@
+body {
+  font-family: sans-serif;
+  background-color: black;
+  color: white;
+  margin: 0;
+}
+#app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+  border: 1px solid red;
+}
+
+@keyframes h1-border {
+  from {
+    width: 0;
+  }
+  to {
+    width: 140px;
+  }
+}
+@keyframes h1-border-2 {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 38px;
+  }
+}
+#main-container {
+  border: 0px solid red;
+  height: 40px;
+  margin-left: 1rem;
+  width: fit-content;
+  height: fit-content;
+  background-color: blue;
+}
+#main-container:hover::before {
+  content: "";
+  position: relative;
+  width: 3800px;
+  height: 2000px;
+  background-color: green;
+  top: 100px;
+  left: 100px;
+  transform: rotate(90deg);
+  animation-name: h1-border-2;
+  animation-duration: 0.5s;
+}
+#main-container:hover::after {
+  content: "";
+  position: absolute;
+  width: 38px;
+  height: 2px;
+  background-color: white;
+  top: 77px;
+  transform: rotate(90deg);
+  animation-name: h1-border-2;
+  animation-duration: 0.5s;
+}
+
+#main-h:hover::before {
+  content: "";
+  position: absolute;
+  width: 139px;
+  height: 2px;
+  background-color: purple;
+  top: 17%;
+  animation-name: h1-border;
+  animation-duration: 0.5s;
+}
+#main-h:hover::after {
+  content: "";
+  position: absolute;
+  width: 139px;
+  height: 2px;
+  background-color: pink;
+  top: 10.5%;
+  animation-name: h1-border;
+  animation-duration: 0.5s;
+}
